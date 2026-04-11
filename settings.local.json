@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__plugin_playwright_playwright__browser_evaluate",
+      "Bash(python \"C:/Users/78470/.claude/plugins/cache/claude-plugins-official/skill-creator/unknown/skills/skill-creator/eval-viewer/generate_review.py\" \"S:/王院组/项目/202604-研创项目/申报/write-key-problems-workspace/iteration-1\" --skill-name \"write-key-problems\" --static \"S:/王院组/项目/202604-研创项目/申报/write-key-problems-workspace/iteration-1/review.html\")",
+      "WebSearch",
+      "Bash(python3 -c \":*)",
+      "Bash(python -c \":*)",
+      "Bash(pandoc:*)",
+      "Bash(python:*)",
+      "Read(//c/Users/78470/.claude/**)",
+      "Bash(find C:/Users/78470/.claude -name write-key-problems* -o -name academic-search*)",
+      "Bash(find C:/Users/78470/.claude -name write-key-problems*)",
+      "Bash(find C:/Users/78470/.claude -path */commands/* -name *.md)",
+      "Bash(echo \"EXIT:$?\")"
+    ]
+  }
+}
