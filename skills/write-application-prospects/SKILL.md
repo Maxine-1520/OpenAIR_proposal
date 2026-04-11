@@ -142,6 +142,19 @@ description: 撰写科研申报书"立项依据-项目应用前景和学术价�
 [问题描述与解决方案]
 ```
 
+## 输出与状态管理
+
+### 输出文件
+完成撰写后，将内容写入 `<output_path>/3-应用前景与学术价值.md`（output_path 由 `write-proposal` skill 管理，从 `proposal-state.json` 中读取）。
+
+### 状态更新与回调
+完成本section撰写后，**必须调用 `write-proposal` skill**，传入以下信息：
+- 已完成的section编号：`S3`
+- 完成状态：`draft_done`（初稿完成）或 `revised`（修订后）
+- 工作摘要：一句话概括本次完成的工作
+
+`write-proposal` 将更新 `proposal-state.json` 和 `proposal-log.md`，并给出下一步建议。
+
 ## 注意事项
 
 1. **不要与"研究目的与意义"重复**：那里侧重"为什么要做"，这里侧重"做了有什么用"；可以呼应但不能大段重复

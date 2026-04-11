@@ -137,6 +137,19 @@ description: 撰写科研申报书"（个人）研究方案-可行性分析"部�
 [总结段]
 ```
 
+## 输出与状态管理
+
+### 输出文件
+完成撰写后，将内容写入 `<output_path>/8-可行性分析.md`（output_path 由 `write-proposal` skill 管理，从 `proposal-state.json` 中读取）。
+
+### 状态更新与回调
+完成本section撰写后，**必须调用 `write-proposal` skill**，传入以下信息：
+- 已完成的section编号：`S8`
+- 完成状态：`draft_done`（初稿完成）或 `revised`（修订后）
+- 工作摘要：一句话概括本次完成的工作
+
+`write-proposal` 将更新 `proposal-state.json` 和 `proposal-log.md`，并给出下一步建议。
+
 ## 注意事项
 
 1. **不能编造条件**：所有设备、成果、团队信息必须真实可查

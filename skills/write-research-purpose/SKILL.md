@@ -213,6 +213,19 @@ description: 撰写科研申报书"立项依据-项目的研究目的与意义"�
 [正文段落]
 ```
 
+## 输出与状态管理
+
+### 输出文件
+完成撰写后，将内容写入 `<output_path>/1-研究目的与意义.md`（output_path 由 `write-proposal` skill 管理，从 `proposal-state.json` 中读取）。
+
+### 状态更新与回调
+完成本section撰写后，**必须调用 `write-proposal` skill**，传入以下信息：
+- 已完成的section编号：`S1`
+- 完成状态：`draft_done`（初稿完成）或 `revised`（修订后）
+- 工作摘要：一句话概括本次完成的工作（如"完成了研究目的三层漏斗论证和研究意义三层递进论述，约2800字"）
+
+`write-proposal` 将更新 `proposal-state.json` 和 `proposal-log.md`，并给出下一步建议。
+
 ## 注意事项
 
 1. **不要编造数据或文献**：如果缺少支撑材料，应提示用户提供或建议进行文献调研

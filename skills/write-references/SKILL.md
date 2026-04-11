@@ -102,6 +102,19 @@ description: 撰写科研申报书"立项依据-参考文献"部分，本质上�
 [N] [完整文献信息]
 ```
 
+## 输出与状态管理
+
+### 输出文件
+完成撰写后，将内容写入 `<output_path>/4-参考文献.md`（output_path 由 `write-proposal` skill 管理，从 `proposal-state.json` 中读取）。
+
+### 状态更新与回调
+完成本section撰写后，**必须调用 `write-proposal` skill**，传入以下信息：
+- 已完成的section编号：`S4`
+- 完成状态：`draft_done`（初稿完成）或 `revised`（修订后）
+- 工作摘要：一句话概括本次完成的工作
+
+`write-proposal` 将更新 `proposal-state.json` 和 `proposal-log.md`，并给出下一步建议。
+
 ## 注意事项
 
 1. **不要编造文献**：如果某篇文献的具体信息无法确认，应标注"待确认"并建议用户核实
