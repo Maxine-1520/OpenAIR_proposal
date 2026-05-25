@@ -48,6 +48,8 @@
    ```bash
    # 将仓库克隆为 .claude 目录（注意目标路径）
    git clone git@github.com:Maxine-1520/OpenAIR_proposal.git .claude
+   # 或者
+   git clone git@code.gitlink.org.cn:Kexing/OpenAIR_proposal.git .claude
    ```
 
    克隆完成后，项目结构如下：
