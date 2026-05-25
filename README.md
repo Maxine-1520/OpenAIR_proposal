@@ -41,9 +41,16 @@
 
 ### 安装步骤
 
-1. **将 skills 目录放入项目**
+1. **克隆仓库到项目目录**
 
-   把整个 `skills/` 文件夹复制到你的项目目录下的 `.claude/skills/` 中：
+   在你的项目根目录下执行：
+
+   ```bash
+   # 将仓库克隆为 .claude 目录（注意目标路径）
+   git clone git@github.com:Maxine-1520/OpenAIR_proposal.git .claude
+   ```
+
+   克隆完成后，项目结构如下：
 
    ```
    your-project/
